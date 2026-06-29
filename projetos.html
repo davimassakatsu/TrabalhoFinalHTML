@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Portfolio — Projetos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos extras para a página de projetos */
+
+    /* Botões de filtro */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.filter-active {
+      border-color: var(--accent);
+      color: var(--accent-soft);
+      background: rgba(124, 111, 205, 0.1);
+    }
+
+    /* Ícone no cover do card */
+    .project-card__cover {
+      font-size: 3.5rem;
+      letter-spacing: -4px;
+    }
+
+    /* Featured card — maior */
+    .project-card--featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card--featured .project-card__cover {
+      height: auto;
+      min-height: 240px;
+    }
+
+    @media (max-width: 640px) {
+      .project-card--featured {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="star-canvas" aria-hidden="true"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <a href="index.html" class="nav__logo">&lt;<span>Dev</span>/&gt;</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Sobre</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="C:\Users\Davi\TrabalhoFinalHTML\docs\CURRICULO DAVI MASSAKATSU.pdf" class="nav__resume" download>&#8659; <span>Currículo</span></a>
+    <button id="nav-toggle" class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO MINI -->
+  <header class="hero" style="min-height: 42vh; padding-top: 100px;">
+    <span class="hero__eyebrow">// o que construí</span>
+    <h1 class="hero__title" style="font-size: clamp(2rem, 5vw, 3.8rem);">
+      Projetos<span class="dot">.</span>
+    </h1>
+    <p class="hero__desc">
+      Uma seleção de projetos reais — do conceito ao deploy.
+    </p>
+  </header>
+
+  <main>
+    <section class="section" aria-label="Lista de projetos">
+
+      <!-- Filtros (JS: initSkillFilter) -->
+      <div class="filter-bar reveal" role="group" aria-label="Filtrar por categoria">
+        <button class="filter-btn filter-active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="ia">IA &amp; ML</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="api">API / Back-end</button>
+      </div>
+
+      <!-- Grid de projetos -->
+      <div class="projects-grid">
+
+        <!-- Projeto 1 — destaque -->
+        <article class="project-card project-card--featured reveal" data-category="ia">
+          <div class="project-card__cover" aria-label="Ícone do projeto">🤖</div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag">IA</span>
+              <span class="tag">Python</span>
+              <span class="tag">GeoAI</span>
+            </div>
+            <h2 class="project-card__title">MONITORAMENTO AUTOMATIZADO DE SISTEMAS DE 
+              IRRIGAÇÃO NO NORTE DO PARANÁ: DETECÇÃO E ANÁLISE DE CONFORMIDADE DE PIVÔS CENTRAIS VIA GEOAI</h2>
+            <p class="project-card__desc">
+              Projeto de iniciação científica que propõe o desenvolvimento de uma metodologia automatizada 
+              para detectar e monitorar pivôs centrais de irrigação no Norte do Paraná através de Inteligência Artificial Geoespacial (GeoAI).
+            </p>
+            <nav class="project-card__links" aria-label="Links do projeto">
+              <a href="C:\Users\Davi\TrabalhoFinalHTML\docs\GeoAI_Projeto_IC.pdf" target="_blank" rel="noopener noreferrer">
+                ↗ Resumo do projeto
+              </a>
+            </nav>
+          </div>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-card__cover" aria-label="Ícone do projeto">📊</div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag">Web App</span>
+              <span class="tag">Godot</span>
+              <span class="tag">HTML</span>
+            </div>
+            <h2 class="project-card__title">GREENFALL</h2>
+            <p class="project-card__desc">
+             GREENFALL é um jogo que busca promover a conscientização sobre sustentabilidade e gestão urbana por 
+             meio de uma experiência interativa. O crescimento acelerado das cidades tem gerado diversos desafios relacionados à sustentabilidade e ao desenvolvimento responsável. 
+             Problemas como poluição ambiental, desigualdade social, crescimento desordenado e escassez de recursos naturais impactam 
+             diretamente a qualidade de vida da população. Tome sua decisão e melhore a cidade!!
+            </p>
+            <nav class="project-card__links">
+              <a href="https://sites.google.com/edu.unifil.br/greenfall/inicio" target="_blank" rel="noopener noreferrer">
+                ↗ Portifólio </a>
+            </nav>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito por DAVI MASSAKATSU &mdash; 2026</p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

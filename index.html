@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Portfolio — Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas das estrelas animadas (JS) -->
+  <canvas id="star-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <a href="index.html" class="nav__logo">&lt;<span>Dev</span>/&gt;</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Sobre</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="C:\Users\Davi\TrabalhoFinalHTML\docs\CURRICULO DAVI MASSAKATSU.pdf" class="nav__resume" download>
+      &#8659; <span>Currículo</span>
+    </a>
+    <button id="nav-toggle" class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Apresentação">
+    <span class="hero__eyebrow">Disponível para projetos</span>
+    <h1 class="hero__title">
+      <span style="background: linear-gradient(135deg, #c8c8e8, #7c6fcd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        DAVI MASSAKATSU
+    </h1>
+    <p class="hero__subtitle">ESTUDANTE DE ENGENHARIA DE SOFTWARE &amp; AGRONOMIA</p>
+    <p class="hero__desc">
+      Onde complexidade encontra clareza — faço as perguntas certas
+      e construo soluções inovadoras que realmente funcionam.
+    </p>
+    <div class="hero__cta">
+      <a href="projetos.html" class="btn btn--primary">Ver Projetos</a>
+      <a href="contato.html" class="btn btn--outline">Falar comigo</a>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <main>
+    <article class="section reveal" id="sobre">
+      <p class="hero__subtitle">SOBRE MIM</p>
+      <div class="about">
+
+        <!-- Foto / Avatar -->
+        <div class="about__image-wrap">
+          <!--
+            Substitua o div abaixo por:
+            <img src="sua-foto.jpg" alt="Foto de Seu Nome" class="about__avatar">
+          -->
+       <img src="C:\Users\Davi\TrabalhoFinalHTML\img\WhatsApp Image 2026-06-27 at 15.25.54.jpeg" alt="Foto de Seu Nome" class="about__avatar">
+        </div>
+
+        <!-- Texto -->
+        <div class="about__text">
+          <h2 class="section__title">Construindo o futuro,<br>linha a linha</h2>
+          <p>
+            Sou estudante de Engenharia de Software na UNIFIL e de Agronomia pela UEL com foco em aplicações web modernas
+            e integração de modelos de Inteligência Artificial com a parte agronômica. Gosto de entender
+            o problema antes de abrir o editor — porque a melhor solução começa
+            com a pergunta certa.
+          </p>
+          <p>
+           Estou buscando meu desenvolvimento pessoal e profissional para minha futura carreira. Pretendo trabalhar com a área da Agtech e a 
+           integração da IA com aplicações agronômicas, para assim abrir minha própria empresa, focando em soluções pontuais para sanar dores específicas
+           nesse setor tão importante para o Brasil.
+          </p>
+
+          <!-- Links sociais -->
+          <nav class="about__links" aria-label="Redes sociais">
+            <a
+              class="social-link"
+              href="https://github.com/seu-usuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub">
+              <!-- SVG GitHub -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-1.93c-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.96 10.96 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.35.78 1.05.78 2.12v3.14c0 .3.2.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+              GitHub
+            </a>
+            <a
+              class="social-link"
+              href="https://linkedin.com/in/seu-usuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <!-- SVG LinkedIn -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              class="social-link"
+              href="mailto:seuemail@gmail.com"
+              aria-label="Enviar e-mail">
+              <!-- SVG Mail -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              Gmail
+            </a>
+          </nav>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== SKILLS ===== -->
+    <article class="section reveal" id="skills">
+      <p class="hero__subtitle">TECNOLOGIAS</p>
+      <h2 class="section__title">Stack técnico</h2>
+
+      <div class="skills-grid">
+        <div class="skill-tag">Python</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Git</div>
+        <div class="skill-tag">HTML5</div>
+        <div class="skill-tag">CSS3</div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Feito por DAVI MASSAKATSU &mdash; 2026</p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
